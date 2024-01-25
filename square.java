@@ -3,7 +3,7 @@ import java.util.List;
 
 public class square {
     private boolean isFull;
-    private List<ConcretePiece> counter = new ArrayList<>();
+    private ArrayList<ConcretePiece> counter = new ArrayList<>();
     private int x;
     private int y;
 
@@ -22,7 +22,7 @@ public class square {
 
     public void undo() {
         this.isFull = false;
-        counter.removeLast();
+        counter.remove(counter.size() - 1);
     }
 
 
