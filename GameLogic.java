@@ -398,9 +398,10 @@ public class GameLogic implements PlayableLogic {
         ArrayList<square> squares = new ArrayList<>();
         for (int x = 0; x < board.length; x++) {
             for (int y = 0; y < board[x].length; y++) {
-                squares.add(board[x][y]);
-                squares.getLast().setX(x);
-                squares.getLast().setY(y);
+                square sq = board[x][y];
+                squares.add(sq);
+                sq.setX(x);
+                sq.setY(y);
             }
         }
         squares.sort(new PiecesComparator());
